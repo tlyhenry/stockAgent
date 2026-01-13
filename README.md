@@ -77,3 +77,4 @@ python -m stock_agent.cli "When did Airbnb file its S-1?"
 ```
 
 If you want this agent implemented for production, the next step is to decide the tooling (e.g., LangChain, LlamaIndex, or a custom RAG pipeline) and provide access to the preferred sources.
+If you want this agent implemented, the next step is to decide the tooling (e.g., LangChain, LlamaIndex, or a custom RAG pipeline) and provide access to the preferred sources.
