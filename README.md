@@ -59,4 +59,22 @@ This repository defines an AI agent that works as an analyst to investigate Airb
 - **Answer composer**: Template-driven response that separates facts from analysis.
 - **Evaluation**: Periodic checks for factual accuracy and citation coverage.
 
+## Reference implementation
+
+The `stock_agent` package is a reference implementation with interchangeable components:
+
+- **Data sources**: in-memory records and text files (extend with SEC/press release loaders).
+- **Retriever**: collects evidence from all sources.
+- **Fact store**: stores extracted claims with confidence values.
+- **LLM registry**: placeholders for OpenAI, Anthropic, and Gemini.
+- **Agent**: orchestrates retrieval, fact extraction, and answer composition.
+- **CLI**: a simple command-line interface for asking questions.
+
+### Example usage
+
+```bash
+python -m stock_agent.cli "When did Airbnb file its S-1?"
+```
+
+If you want this agent implemented for production, the next step is to decide the tooling (e.g., LangChain, LlamaIndex, or a custom RAG pipeline) and provide access to the preferred sources.
 If you want this agent implemented, the next step is to decide the tooling (e.g., LangChain, LlamaIndex, or a custom RAG pipeline) and provide access to the preferred sources.
