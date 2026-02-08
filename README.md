@@ -59,6 +59,12 @@ This repository defines an AI agent that works as an analyst to investigate Airb
 - **Answer composer**: Template-driven response that separates facts from analysis.
 - **Evaluation**: Periodic checks for factual accuracy and citation coverage.
 
+## Research skill schema
+
+The 10-step workflow is defined as a reusable skill package under `skills/stock-research-workflow/`.
+See the schema and step definitions in that skill’s `SKILL.md` and `references/schemas.md` to wire
+an agent with strict input/output handoffs.
+
 ## Reference implementation
 
 The `stock_agent` package is a reference implementation with interchangeable components:
